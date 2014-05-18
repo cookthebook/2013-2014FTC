@@ -1,0 +1,10 @@
+4 inch wheels:
+R IR length - 2 + 1/2
+L IR length - 3 + 1/2
+out Forward - 1/2
+1 wheel turn (90 deg) - 2 + 1/6 Left Wheel
+		    -1.5 for Right
+forward - 4
+
+5 inch wheels (theory):
+x4/5

@@ -1,0 +1,1 @@
+This repository is designed to be a sort of archive and a testing ground for last year's code. I might make a few changes to the code if one is needed for a demonstration but those should be few and far between. This repository (as will next year's) is public, so other teams/people can view it, we are very open. Enjoy!
