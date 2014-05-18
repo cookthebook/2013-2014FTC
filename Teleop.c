@@ -32,13 +32,13 @@ while(true){
 		spinSpeed = 20;
 	}
 
-if(abs(joystick.joy1_y1) > 10){
+if(abs(joystick.joy1_y1) >= 10){
 	motor[Left] = joystick.joy1_y1 / abs(joystick.joy1_y1) * 75 / constant;
 }
 else{
 	motor[Left] = 0;
 }
-if(abs(joystick.joy1_y2) > 10){
+if(abs(joystick.joy1_y2) >= 10){
 	motor[Right] = joystick.joy1_y2 / abs(joystick.joy1_y2) * 75 / constant;
 }
 else{
