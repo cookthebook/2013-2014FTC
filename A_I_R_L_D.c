@@ -119,7 +119,7 @@ void OgetOnPlatform(const int turn, const int forward){
 
 	while(abs(nMotorEncoder(Left)) < turn){
 	}
-	motor[Right] = 0;
+	motor[Right] = normSpeed;
 	motor[Left] = -normSpeed;
 
 	nMotorEncoder(Right) = 0;
@@ -225,7 +225,7 @@ void getOnPlatform(const int turn, const int forward){
 	wait1Msec(50);
 
 	motor[Right] = -normSpeed;
-	motor[Left] = 0;
+	motor[Left] = normSpeed;
 
 	while(abs(nMotorEncoder(Right)) < turn){
 	}
@@ -260,12 +260,12 @@ while(true){
    if(trans == 1) outLowGoal();
    if(trans == 2) turn(100, 3500);//720, 3120
    if(trans == 3) center();
-   if(trans == 4) getOnPlatform(1800, 4500);//2160, 5760
+   if(trans == 4) getOnPlatform(1500, 4500);//2160, 5760
 
    //obstruction//
    if(trans == 9) OoutLowGoal();
    if(trans == 91) Oturn(500, 3500);//720, 3120
    if(trans == 92) Ocenter();
-   if(trans == 93) OgetOnPlatform(2500, 4000);//2160, 5760
+   if(trans == 93) OgetOnPlatform(1500, 4000);//2160, 5760
 }
 }
