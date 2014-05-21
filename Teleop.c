@@ -30,7 +30,7 @@ while(true){
 	}
 
 	motor[Right] = abs(joystick.joy1_y1) > 10 ? (joystick.joy1_y1 * 75 / 128) / constant : 0;
-	motor[Left] = abs(joystick.joy1_y2) > 10 ? (joystick.joy1_y1 * 75 / 128) / constant : 0;
+	motor[Left] = abs(joystick.joy1_y2) > 10 ? (joystick.joy1_y2 * 75 / 128) / constant : 0;
 
 	//Lift//
 	if(joy1Btn(8)){
