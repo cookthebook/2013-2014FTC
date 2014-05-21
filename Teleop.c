@@ -12,9 +12,6 @@
 
 float constant;
 int spinSpeed;
-int armSpeed = 75;
-
-
 
 task main()
 {
@@ -32,18 +29,9 @@ while(true){
 		spinSpeed = 20;
 	}
 
-if(abs(joystick.joy1_y1) >= 10){
-	motor[Left] = joystick.joy1_y1 / abs(joystick.joy1_y1) * 75 / constant;
-}
-else{
-	motor[Left] = 0;
-}
-if(abs(joystick.joy1_y2) >= 10){
-	motor[Right] = joystick.joy1_y2 / abs(joystick.joy1_y2) * 75 / constant;
-}
-else{
-	motor[Right] = 0;
-}
+	motor[Right] = abs(joystick.joy1_y1) > 10 ? (joystick.joy1_y1 * 75 / 128) / constant : 0;
+	motor[Left] = abs(joystick.joy1_y2) > 10 ? (joystick.joy1_y1 * 75 / 128) / constant : 0;
+
 	//Lift//
 	if(joy1Btn(8)){
 		motor[Shoulder] = -80;
