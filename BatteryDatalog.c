@@ -20,11 +20,15 @@ task main()
 	nMotorEncoder(Right) = 0;
 	nMotorEncoder(Left) = 0;
 	wait1Msec(50);
-	ClearTimer(T1);
+
 	ClearTimer(T2);
 
 	motor[Right] = speed;
 	motor[Left] = -speed;
+	AddToDatalog(speed, speed);
+	wait1Msec(8000);
+	//Get up to speed//
+	ClearTimer(T1);
 	while(time1(T1) < 10000){
 	}
 	//Starting encoder ticks per second//
@@ -52,4 +56,5 @@ task main()
 
   time = time100(T2) / 10;
 	AddToDatalog(time, time);
+	SaveNxtDatalog();
 }
