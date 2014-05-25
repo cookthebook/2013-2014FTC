@@ -19,8 +19,12 @@ bool line = false;
 
 task main()
 {
+waitForStart();
 ClearTimer(T1);
 ClearTimer(T2);
+nMotorEncoder(Right) = 0;
+nMotorEncoder(Left) = 0;
+wait1Msec(50);
 
 motor[Right] = speed;
 motor[Left] = speed;
