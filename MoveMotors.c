@@ -118,6 +118,11 @@ while(menu == 3){
 		default:
 			nxtDisplayCenteredBigTextLine(3, "%s", "Error!");
 	}
+	motor[Block] = 0;
+	motor[Left] = 0;
+	motor[Right] = 0;
+	motor[Spinner] = 0;
+	motor[Arm] = 0;
 	}
 }
 }
