@@ -10,7 +10,7 @@
 
 #include "JoystickDriver.c"
 
-int motorVal = 0;
+int motorVal = 1;
 int motorDir = 1;
 int menu = 0;
 /*Menus:
@@ -23,7 +23,7 @@ task main()
 {
 eraseDisplay();
 while(true){
-	//Read arrow toggles//
+//Read arrow toggles//
 while(menu == 0){
 	if(nNxtButtonPressed == 1){
 		motorVal++;
@@ -35,10 +35,10 @@ while(menu == 0){
 		while(nNxtButtonPressed == 2){
 		}
 	}
-	if(motorVal == -1){
-		motorVal = 0;
+	if(motorVal <= 0){
+		motorVal = 1;
 	}
-	if(motorVal == 6){
+	if(motorVal >= 6){
 		motorVal = 5;
 	}
 
@@ -102,34 +102,22 @@ while(menu == 1){
 eraseDisplay();
 
 while(menu == 3){
+	nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
+	while(nNxtButtonPressed == 3){
 	switch(motorVal){
 		case 1:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
-			while(nNxtButtonPressed == 3){
 				motor[Block] = 50 * motorDir;
-			}
 		case 2:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
-			while(nNxtButtonPressed == 3){
 				motor[Left] = 50 * motorDir;
-			}
 		case 3:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
-			while(nNxtButtonPressed == 3){
 				motor[Right] = 50 * motorDir;
-			}
 		case 4:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
-			while(nNxtButtonPressed == 3){
 				motor[Spinner] = 50 * motorDir;
-			}
 		case 5:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Press orange button to move motor...");
-			while(nNxtButtonPressed == 3){
 				motor[Arm] = 50 * motorDir;
-			}
 		default:
 			nxtDisplayCenteredBigTextLine(3, "%s", "Error!");
+	}
 	}
 }
 }
