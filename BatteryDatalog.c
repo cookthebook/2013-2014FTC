@@ -16,7 +16,6 @@ int time;
 task main()
 {
 	waitForStart();
-	startVolts = nAvgBatteryLevel;
 	nMotorEncoder(Right) = 0;
 	nMotorEncoder(Left) = 0;
 	wait1Msec(50);
@@ -29,6 +28,7 @@ task main()
 	wait1Msec(8000);
 	//Get up to speed//
 	ClearTimer(T1);
+	startVolts = nAvgBatteryLevel;
 	while(time1(T1) < 10000){
 	}
 	//Starting encoder ticks per second//
