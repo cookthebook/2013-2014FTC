@@ -65,6 +65,8 @@ while(menu == 0){
 
 	if(nNxtButtonPressed == 3){
 		menu = 1;
+		while(nNxtButtonPressed == 3){
+		}
 	}
 }
 
@@ -96,6 +98,8 @@ while(menu == 1){
 
 	if(nNxtButtonPressed == 3){
 		menu = 2;
+		while(nNxtButtonPressed == 3){
+		}
 	}
 }
 
