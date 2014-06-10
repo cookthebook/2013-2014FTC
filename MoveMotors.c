@@ -84,17 +84,7 @@ while(menu == 1){
 		}
 	}
 
-	switch(motorDir){
-		case 1:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Motor Direction: Positive");
-			break;
-		case -1:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Motor Direction: Negative");
-			break;
-		default:
-			nxtDisplayCenteredBigTextLine(3, "%s", "Error!");
-			break;
-	}
+	nxtDisplayBigTextLine(3, "%s%i", "Motor Direction: ", motorDir * 50);
 
 	if(nNxtButtonPressed == 3){
 		menu = 2;

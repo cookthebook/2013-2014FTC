@@ -440,13 +440,12 @@ while(menu == 2){
 	switch(selection){
 		case 0:
 			nxtDisplayCenteredBigTextLine(3, "%s", "Delay: OFF");
-			nxtDisplayCenteredBigTextLine(4, "%s", "ORANGE to start!");
 			break;
 		case 1:
 			nxtDisplayCenteredBigTextLine(3, "%s", "DELAY: ON");
-			nxtDisplayCenteredBigTextLine(4, "%s", "ORANGE to start!");
 			break;
 	}
+	nxtDisplayCenteredBigTextLine(4, "%s", "ORANGE to start!");
 
 	//Make selection//
 	if(nNxtButtonPressed == 3){
